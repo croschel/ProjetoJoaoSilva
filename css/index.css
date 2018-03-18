@@ -252,9 +252,7 @@ body {
     color: #000;
     padding: 1.5em;
 }
-.blog .mais-recente {
-    background-color: #F2FFFC;
+.inicio-post{
+    display: none;
 }
-.blog .mais-recente a {
-    color: #F26;
-}
+
