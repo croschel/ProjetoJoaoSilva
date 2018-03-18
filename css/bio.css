@@ -6,6 +6,16 @@
     width: 30ch;
     box-sizing: border-box;
 }
+.citacao-bio p{
+    position: relative;
+}
+.citacao-bio::before{
+    content: ' " ';
+    font-size: 10rem;
+    color: #bbb;
+    position: absolute;
+    line-height: .8;
+}
 .citacao-bio:hover,
 .citacao-bio:focus{
     box-shadow:0 0 0 99999px rgba(0, 0, 0, .8);
@@ -28,4 +38,10 @@ blockquote:nth-of-type(even){
 .citacao-bio:nth-of-type(even):focus{
     -webkit-transform: scale(1.2) rotate(20deg);
     transform: scale(1.2) rotate(20deg);
+}
+
+.container > p::first-letter{
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1px 1px black;
 }

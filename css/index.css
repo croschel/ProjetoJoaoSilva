@@ -245,14 +245,19 @@ body {
 .blog .inicio-post {
     position: absolute;
     top: 4em;
-    height: 8em;
-    left: 30%;
+    height: 4em;
+    left: 25%;
     right: 4em;
-    background-color: #F2FFFC;
-    color: #000;
+    background-color: rgb(160, 163, 163);
+    color: #FCF;
     padding: 1.5em;
+    font-size: 1.4em;
 }
 .inicio-post{
     display: none;
+}
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post{
+    display: block;
 }
 
