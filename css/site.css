@@ -34,12 +34,16 @@ main a {
     color: #851944;
 }
 
+main a:hover,
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
+}
+
 main p {
     text-align: justify;
     margin: 1em 0;
-}
-main a:hover, a:focus{
-    color: red;
 }
 
 .navegacao-site {
@@ -55,14 +59,16 @@ main a:hover, a:focus{
     text-transform: lowercase;
 }
 
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
 .navegacao-site h1 {
     font-size: 1.5em;
     margin-bottom: 1em;
 }
-.navegacao-site a:hover, a:focus{
-    text-shadow:0 0 10px pink;
-    opacity: .6;
-}
+
 .rodape-pagina {
     color: #F2FFFC;
     padding: 1em;
@@ -82,9 +88,7 @@ main a:hover, a:focus{
         transparent 70%);
     background-size: 25% 100%;
 }
-footer a:hover,a:focus{
-    color: red;
-}
+
 .container {
     width: 80ch;
     margin-left: auto;
@@ -109,32 +113,8 @@ em {
     height: 40px;
     display: block;
     text-indent: -99999px;
-    position: relative;
 }
-.icones-redes-sociais a:hover::after,
-                      a:focus::after{
-    content: attr(data-legenda);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    text-indent: 0;
-    width: 300%;
-    color: white;
-    background-color: rgba(0,0,0,1);
-    font-size: 0.75em;
-    text-decoration: none;
-}
-.icones-redes-sociais a:hover::before,
-                      a:focus::before{
-    content: '';
-    width: 1em;
-    height: 1em;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: rotate(45deg) translate(20px,1px);
-}
+
 .github {
     background-image: url(../imagens/github.png);
 }
@@ -158,10 +138,10 @@ main {
     border-left: .5em solid black;
     border-bottom: .5em solid black;
     box-sizing: border-box;
-    width: 20%;
 }
 
 .navegacao-site {
+    width: 20%;
     float: right;
     position: relative;
     top: 300px;
@@ -172,4 +152,33 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    transform: translateY(.5em) rotate(45deg);
 }
