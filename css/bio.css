@@ -52,3 +52,43 @@
 .citacao-bio > p {
     position: relative;
 }
+
+.cabecalho-tabela{
+    background-color: #3C1D3D;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.nome-habilidade{
+    background-color: #851944;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+}
+.nivel-descricao-habilidade{
+    background-color:#EEE;
+    padding: 1em;
+}
+#tabela-habilidades{
+    border-spacing: 0.25em;
+    border-collapse: separate;
+}
+.divisor-tabela{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: rgb(189, 182, 182) solid 0.03em; 
+}
+
+.titulo-tabela{
+    font-weight: bold;
+    font-family: "Crimson Text","Times new Roman","serif";
+    font-size: 150%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+#centralizador-celula{
+    text-align: center;
+    vertical-align: middle;
+    font-style: italic;
+}
