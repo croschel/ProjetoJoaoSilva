@@ -47,16 +47,14 @@ main p {
 }
 
 .navegacao-site {
-    text-align: center;
-    background-color: #3C1D3D;
-    color: #F2FFFC;
-    padding: 1em;
+    
 }
 
 .navegacao-site a {
     color: inherit;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     text-transform: lowercase;
+    
 }
 
 .navegacao-site a:hover,
@@ -145,6 +143,10 @@ main {
     float: right;
     position: relative;
     top: 300px;
+    text-align: center;
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 1em;
 }
 
 .minha-foto {
