@@ -16,6 +16,15 @@
     text-align: right;
     display: block;
 }
+.saudacao-ultima-linha em{
+    animation: quicar 2s infinite;
+    position: relative;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.saudacao-ultima-linha em:hover{
+    animation-play-state: paused; /*parar a animação temporariamente*/
+}
 .saudacao strong {
     font-size: 2em;
     color: #000;
@@ -37,6 +46,7 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    transition: 2s;
 }
 .secao-inicio {
     padding: 2em;
@@ -132,10 +142,11 @@ body {
     font-size: 400%;
     color: rgba(255, 127, 127, .5);
     position: absolute;
+    animation: aparece 2s;
 }
 .eficiencia {
-    top: 50%;
-    left: 60%;
+    top: 45%;
+    left: 62%;
     -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
 }
@@ -241,6 +252,9 @@ body {
 
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
 }
 .blog .inicio-post {
     position: absolute;
@@ -261,4 +275,48 @@ body {
 .blog a:focus {
     background-color: #F2FFFC;
     color: #F26;
+}
+
+.botao-index:hover, 
+.botao-index:focus,
+.botao-index:active{
+    box-shadow: 0 0 1em #FA9; 
+    background-color: #C54974;
+} 
+
+/*Funções Keyframes*/
+@keyframes aparece{
+    0%{
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes aparece{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes quicar{
+    from {
+        top: -5px;
+    }
+    to {
+        position: relative;
+        top: 5px;
+    }
+}
+@-webkit-keyframes quicar{
+    from {
+        top: -5px;
+    }
+    to {
+        position: relative;
+        top: 5px;
+    }
 }
