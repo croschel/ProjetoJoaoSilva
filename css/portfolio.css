@@ -1,5 +1,6 @@
 .portfolio li {
-    display: inline-block;
+    display: flex;
+    flex: 1 1 45%;
     border: .5em solid black;
     background-color: #FAFFFC;
     width: 45%;
@@ -12,4 +13,12 @@
 .portfolio img {
     width: 100%;
     box-shadow: 0 0 4px #000;
+}
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio li:first-child{
+    width: 100%;
+    flex-basis: 100%;
 }
